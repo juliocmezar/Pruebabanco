@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class Pruebabanco {
 
     public static Connection conectar() {
-        String usuario = "programacion";
+        String usuario = "";
         String contrasena = "#3Programacion3";
         String url = "jdbc:mysql://72.167.84.254/banco";
 
@@ -17,7 +17,7 @@ public class Pruebabanco {
             con = DriverManager.getConnection(url, usuario, contrasena);
             System.out.println("conexion correcta");
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println("Conexión incorrecta");
         }
         return con;
 
@@ -36,7 +36,7 @@ public class Pruebabanco {
             System.out.println("Consulta correcta");
         } catch (SQLException ex) {
             System.out.println("Error en el sql");
-            ex.printStackTrace();
+
         }
     }
 
